@@ -1,0 +1,14 @@
+<pre class='metadata'>
+ Group: AOM
+ Status: WGD
+ Title: Burst data description for the Immersive Audio Model and Formats (IAMF)
+ Editor: Jan Skoglund, Google, jks@google.com
+ Repository: AOMediaCodec/iac
+ Shortname: iamf-burst
+ URL: https://aomediacodec.github.io/iamf-burst/
+ Date: 2022-1-11
+ Abstract: This AOM document specifies the method of conveying non-linear PCM bitstreams applying IEC 60958 encoded according to the Immersive Audio Model and Formats (IAMF) format.
+ </pre>
+ 
+ # Section 1
+ This is an empty spec
