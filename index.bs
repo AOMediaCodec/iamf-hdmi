@@ -5,7 +5,7 @@ Title: Burst data description for the Immersive Audio Model and Formats (IAMF)
 Editor: Jan Skoglund, Google, jks@google.com
 Repository: AOMediaCodec/iamf-hdmi
 Shortname: iamf-burst
-URL: https://aomediacodec.github.io/iamf-burst/
+URL: https://aomediacodec.github.io/iamf-hdmi/
 Date: 2025-03-14
 Abstract: This AOM document specifies the method of conveying non-linear PCM bitstreams applying [[!IEC-60958]] encoded according to the Immersive Audio Model and Formats ([[!IAMF]]) format.
 </pre>
