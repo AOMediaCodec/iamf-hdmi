@@ -152,7 +152,7 @@ Each data-burst contains a minimum of 4 mandatory fields (Pa, Pb, Pc, and Pd) an
 
 The maximum size of an IAMF audio data frame is dependent on certain parameters of the IAMF bit stream, for example, the number of encoded channels. Details are specified in the IAMF specification.
 
-In order to simplify the timing mechanism for receiving and decoding of content of IAMF audio data bursts, the receiving delay should be calculated as the time necessary to receive the complete data-burst including the stuffing. The maximum time available to decode (the decoding delay) should be selected to correspond to the length of one full IAMF audio data-burst at the IEC 60958b frame rate. 
+In order to simplify the timing mechanism for receiving and decoding of content of IAMF audio data bursts, the receiving delay should be calculated as the time necessary to receive the complete data-burst including the stuffing. The maximum time available to decode (the decoding delay) should be selected to correspond to the length of one full IAMF audio data-burst at the IEC 60958 frame rate. 
 
 If the HBR mode is used it is recommended to set the relationship between the IEC 60958 frame rate and the audio sample rate (bits 10 and 11 of Pc, see Table 1) so that the resulting maximum data-burst payload size is greater than the maximum size of an IAMF audio data frame. 
 
