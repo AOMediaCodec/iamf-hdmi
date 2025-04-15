@@ -82,7 +82,7 @@ The coding of the bitstream and data-burst is in accordance with [[!IEC-61937-1]
 Pc bits 0 to 7 shall indicate extended data-type according to [[!IEC-61937-1]] clause 6.1.8.3. As all bits are used in the preamble word of Pc, the value of data-type in Pc bits 0 to 4 is set to be 0x1F and the value of data-type bits 5 to 6 are set to 0. The extended data-type burst preamble Pe is used and the value is set to 0x0003. The 32-bit burst-info contains information about the data which will be found in the data-burst. 
 (see Table 1).
 
-<center><img src="table-1-fields-of-burst-info.png" width="800"></center>
+<center><img src="images/table-1-fields-of-burst-info.png" width="800"></center>
 <center><b>Table 1. Fields of burst-info</b></center>
 
 
@@ -101,7 +101,7 @@ The decoding latency (or delay) should be used by the transmitter to schedule da
 
 The pause data-bursts for IAMF are defined in Table 2
 
-<center><img src="table-2-repetition-period-of-pause-data-burst.png" width="600"></center>
+<center><img src="images/table-2-repetition-period-of-pause-data-burst.png" width="600"></center>
 <center><b>Table 2 – Repetition period of pause data-burst</b></center>
 
 If regular audio data-bursts are not being transmitted due to, for example, a pause condition, it is recommended to use pause data-bursts to fill such stream gaps. The repetition period of the pause data-bursts should be selected according to Table 2. If other repetition periods are necessary to precisely fill the stream gap length, or to meet the requirement on audio data-burst spacing (see IEC 61937-1), pause data-bursts may have other lengths.
@@ -113,7 +113,7 @@ When a stream gap in an audio stream is filled by a sequence of pause data-burst
 ### The IAMF data ### {#iamf-data}
 An IAMF bit stream consists of a sequence of IAMF audio data frames. The IAMF data-burst is headed with a burst-preamble, followed by the burst-payload. The structure of the IAMF data-burst is shown in Figure 1. The extended data-type Pe bits 0 to 15 of an IAMF data-burst is 0x0003h, and the data-type Pc bits 8 to 9 is 0. When IAMF data is being transmitted, the transmission device shall ensure that both the extended data-type Pe bits 0 to 15 and data-type Pc bits 8 to 9 values are set correctly. Additionally, the receiving device shall utilize both the extended data-type Pe bits 0 to 15 and data-type Pc bits 8 to 9 values to ensure that the content of the data-burst is correctly identified as IAMF.
 
-<center><img src="figure-1-IAMF-data-burst-structure.png" width="800"></center>
+<center><img src="images/figure-1-IAMF-data-burst-structure.png" width="800"></center>
 <center><b>Figure 1. IAMF data-burst structure</b></center>
 
 The IEC 60958 frame rate for data-type IAMF shall be equal to the audio sample rate.  The repetition period of data-bursts in IEC 60958 frames shall be determined from the IAMF audio data frame length in accordance with Table 1 (Pc bits 10-11). The maximum data-burst payload size in bits is determined from 2 x 16 x Rp – (Paf + Bs), where
@@ -129,7 +129,7 @@ With a repetition period according to Table 1, the maximum data-burst payload si
 ### The IAMF HBR data ### {#iamf-hbr-data}
 When the required transmission rate for IAMF audio data exceeds the maximum data rate supported by an IAMF audio data burst, an IAMF HBR data-burst is used instead. An IAMF HBR data-burst is headed with a burst-preamble, followed by the burst-payload. The structure of the IAMF HBR data-burst is shown in Figure 1. The extended data-type Pe bits 0 to 15 of an IAMF data-burst is 0x0001h, and the data-type Pc bits 8 to 9 is 1. When IAMF data is being transmitted, the transmission device shall ensure that both the extended data-type Pe bits 0 to 15 and data-type Pc bits 8 to 9 values are set correctly. Additionally, the receiving device shall utilize both the extended data-type Pe bits 0 to 15 and data-type Pc bits 8 to 9 values to ensure that the content of the data-burst is correctly identified as IAMF HBR.
 
-<center><img src="figure-2-IAMF-HBR-data-burst-structure.png" width="800"></center>
+<center><img src="images/figure-2-IAMF-HBR-data-burst-structure.png" width="800"></center>
 <center><b>Figure 2. IAMF HBR data-burst structure</b></center>
 
 The IEC 60958 frame rate for data-type IAMF HBR shall be equal to two, four, eight, or sixteen times  the audio sample rate. Pc bits 10 to 11 indicate the relationship between the IEC 60958 frame rate and the audio sample rate. 
@@ -141,7 +141,7 @@ The repetition period of data-bursts in IEC 60958 frames shall be determined fro
 With repetition periods according to Table 1, the maximum data-burst payload size can then be calculated and be found in Table 3.
 
 
-<center><img src="table-3-maximum-burst-length-values.png" width="700"></center>
+<center><img src="images/table-3-maximum-burst-length-values.png" width="700"></center>
 <center><b>Table 3 – Maximum burst-length values per IAMF and IAMF HBR data-burst repetition period</b></center>
 
 
