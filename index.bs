@@ -6,7 +6,7 @@ Editor: Jan Skoglund, Google, jks@google.com
 Repository: AOMediaCodec/iamf-hdmi
 Shortname: iamf-burst
 URL: https://aomediacodec.github.io/iamf-hdmi/
-Date: 2025-06-12
+Date: 2026-01-30
 Abstract: This AOM document specifies the method of conveying non-linear PCM bitstreams applying [[!IEC-60958]] encoded according to the Immersive Audio Model and Formats ([[!IAMF]]) format.
 </pre>
 
@@ -90,6 +90,10 @@ Bits 0 to 6 of the burst-info (Pc) and bits 0 to 15 of the burst-info (Pe) signa
 
 The Pc bits 8 to 9 indicate the IAMF bitstream mode. The repetition periods of data bursts in IEC 60958 frames shall be determined from the data-type-dependent information specified in Table 1.
 
+<em>
+NOTE: The specific audio codec used within the IAMF bitstream is identified in the Codec Config OBU as defined in [[!IAMF]] and is not signaled within the burst-info fields.
+</em>
+
 # Format of IAMF data-burst # {#format}
 
 ## General ## {#format-general}
@@ -143,6 +147,11 @@ With repetition periods according to Table 1, the maximum data-burst payload siz
 
 <center><img src="images/table-3-maximum-burst-length-values.png" width="700"></center>
 <center><b>Table 3 – Maximum burst-length values per IAMF and IAMF HBR data-burst repetition period</b></center>
+
+
+<em>
+NOTE: The High Bit Rate (HBR) transport modes defined in this section, utilizing IEC 60958 frame rates of 2×, 4×, 8×, and 16× the reference audio sample rate, provide increased data payload capacity. While Section 1.2 of this specification currently constrains the audio sampling rate to 48 kHz, this repetition mechanism inherently supports the bandwidth requirements for IAMF streams employing higher audio sampling rates (e.g., 96 kHz) or higher audio bit depths, provided the resulting frame size does not exceed the maximum burst-length values defined in Table 3.
+</em>
 
 
 ### Latency of IAMF decoding ### {#latency}
