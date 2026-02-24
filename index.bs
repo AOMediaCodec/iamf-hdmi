@@ -6,7 +6,7 @@ Editor: Jan Skoglund, Google, jks@google.com
 Repository: AOMediaCodec/iamf-hdmi
 Shortname: iamf-burst
 URL: https://aomediacodec.github.io/iamf-hdmi/v1.0.0.html
-Date: 2026-02-06
+Date: 2026-02-23
 Abstract: This AOM document specifies the method of conveying non-linear PCM bitstreams applying [[!IEC-60958]] encoded according to the Immersive Audio Model and Formats ([[!IAMF]]) format.
 </pre>
 
