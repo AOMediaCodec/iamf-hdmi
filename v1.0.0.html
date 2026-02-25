@@ -1488,9 +1488,9 @@ Possible extra rowspan handling
 		}
 	}
 </style>
-  <meta content="Bikeshed version 0ef803fdf, updated Tue Jan 6 11:59:39 2026 -0800" name="generator">
-  <link href="https://aomediacodec.github.io/iamf-hdmi/" rel="canonical">
-  <meta content="2131659b914d36461bfecce02b77abc47fb54653" name="revision">
+  <meta content="Bikeshed version 3f621ba99, updated Mon Jul 28 15:38:36 2025 -0700" name="generator">
+  <link href="https://aomediacodec.github.io/iamf-hdmi/v1.0.0.html" rel="canonical">
+  <meta content="9efd3be1f69d8061e1427b2e76201effc6039579" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -1802,7 +1802,7 @@ body {
 }
 .invalid.example:not(.no-marker)::before,
 .illegal.example:not(.no-marker)::before {
-    content: "Invalid Example " counter(example);
+    content: "Invalid Example" counter(example);
 }
 
 figcaption {
@@ -1897,40 +1897,35 @@ dfn > a.self-link::before      { content: "#"; }
     
 </a>
 </p>
-   <h1 class="no-ref p-name" id="title">Burst data description for the Immersive Audio Model and Formats (IAMF)</h1>
-   <h2 class="heading no-num no-ref no-toc settled" id="profile-and-date"><span class="content">AOM Working Group Approved Draft,
-    <time class="dt-updated" datetime="2025-06-12">12 June 2025</time></span></h2>
+   <h1 class="p-name no-ref" id="title">Burst data description for the Immersive Audio Model and Formats (IAMF)</h1>
+   <h2 class="p-name no-num no-toc no-ref heading settled" id="subtitle"><span class="content"></span></h2>
+   <h3 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">AOM Final Deliverable,
+    <time class="dt-updated" datetime="2026-02-23">23 February 2026</time></span></h3>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
-     <dd><a class="u-url" href="https://aomediacodec.github.io/iamf-hdmi/">https://aomediacodec.github.io/iamf-hdmi/</a>
+     <dd><a class="u-url" href="https://aomediacodec.github.io/iamf-hdmi/v1.0.0.html">https://aomediacodec.github.io/iamf-hdmi/v1.0.0.html</a>
      <dt>Issue Tracking:
      <dd><a href="https://github.com/AOMediaCodec/iamf-hdmi/issues/">GitHub</a>
      <dt class="editor">Editor:
-     <dd class="editor h-card p-author vcard"><a class="email fn p-name u-email" href="mailto:jks@google.com">Jan Skoglund</a> (<span class="org p-org">Google</span>)
+     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:jks@google.com">Jan Skoglund</a> (<span class="p-org org">Google</span>)
     </dl>
    </div>
-   <div data-fill-with="warning">
-    <details class="annoying-warning" open>
-     <summary>Release Candidate</summary>
-     <p>This document is the release candidate for the next version of this specification. It awaits formal approval by the AOM.</p>
-    </details>
-   </div>
+   <div data-fill-with="warning"></div>
    <p class="copyright" data-fill-with="copyright">
-    <p>Copyright 2025, <a href="https://aomedia.org">AOM</a></p>
+    <p>Copyright 2026, <a href="https://aomedia.org">AOM</a></p>
     <p>Licensing information is available at <a href="http://aomedia.org/license/">http://aomedia.org/license/</a></p>
     <p>The MATERIALS ARE PROVIDED “AS IS.” The Alliance for Open Media, its members, and its contributors expressly disclaim any warranties (express, implied, or otherwise), including implied warranties of merchantability, non-infringement, fitness for a particular purpose, or title, related to the materials. The entire risk as to implementing or otherwise using the materials is assumed by the implementer and user. IN NO EVENT WILL THE ALLIANCE FOR OPEN MEDIA, ITS MEMBERS, OR CONTRIBUTORS BE LIABLE TO ANY OTHER PARTY FOR LOST PROFITS OR ANY FORM OF INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF ANY CHARACTER FROM ANY CAUSES OF ACTION OF ANY KIND WITH RESPECT TO THIS DELIVERABLE OR ITS GOVERNING AGREEMENT, WHETHER BASED ON BREACH OF CONTRACT, TORT (INCLUDING NEGLIGENCE), OR OTHERWISE, AND WHETHER OR NOT THE OTHER MEMBER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
    </p>
    <hr title="Separator for header">
   </div>
   <div class="p-summary" data-fill-with="abstract">
-   <h2 class="heading no-num no-ref no-toc settled" id="abstract"><span class="content">Abstract</span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
    <p>This AOM document specifies the method of conveying non-linear PCM bitstreams applying <a data-link-type="biblio" href="#biblio-iec-60958" title="IEC 60958 — Digital audio interface — (All parts)">[IEC-60958]</a> encoded according to the Immersive Audio Model and Formats (<a data-link-type="biblio" href="#biblio-iamf" title="Immersive Audio Model and Formats">[IAMF]</a>) format.</p>
   </div>
-  <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
-   <h2 class="no-num no-ref no-toc" id="contents">Table of Contents</h2>
-   <ol class="toc">
+   <h2 class="no-num no-toc no-ref" id="contents">Table of Contents</h2>
+   <ol class="toc" role="directory">
     <li>
      <a href="#terms"><span class="secno">1</span> <span class="content">Terms and definitions</span></a>
      <ol class="toc">
@@ -2007,7 +2002,7 @@ Pc bits 0 to 7 shall indicate extended data-type according to <a data-link-type=
 (see Table 1).
 
 
-   <center><img src="images/table-1-fields-of-burst-info.png" width="800"></center>
+   <center><img src="v1.0.0_images/table-1-fields-of-burst-info.png" width="800"></center>
    <center><b>Table 1. Fields of burst-info</b></center>
    <p>Bits 0 to 6 of the burst-info (Pc) and bits 0 to 15 of the burst-info (Pe) signal the data-type used for transmission. For IAMF, the signalled extended data-type is 0x0003.</p>
    <p>The Pc bits 8 to 9 indicate the IAMF bitstream mode. The repetition periods of data bursts in IEC 60958 frames shall be determined from the data-type-dependent information specified in Table 1.</p>
@@ -2020,7 +2015,7 @@ This clause specifies the IAMF data-burst. Specific properties such as reference
    <p>The decoding latency (or delay) should be used by the transmitter to schedule data-bursts as necessary to establish synchronization between picture and decoded audio.</p>
    <h3 class="heading settled" data-level="3.2" id="pause-burst"><span class="secno">3.2. </span><span class="content">Pause data-burst</span><a class="self-link" href="#pause-burst"></a></h3>
    <p>The pause data-bursts for IAMF are defined in Table 2</p>
-   <center><img src="images/table-2-repetition-period-of-pause-data-burst.png" width="600"></center>
+   <center><img src="v1.0.0_images/table-2-repetition-period-of-pause-data-burst.png" width="600"></center>
    <center><b>Table 2 – Repetition period of pause data-burst</b></center>
    <p>If regular audio data-bursts are not being transmitted due to, for example, a pause condition, it is recommended to use pause data-bursts to fill such stream gaps. The repetition period of the pause data-bursts should be selected according to Table 2. If other repetition periods are necessary to precisely fill the stream gap length, or to meet the requirement on audio data-burst spacing (see IEC 61937-1), pause data-bursts may have other lengths.</p>
    <p>When a stream gap in an audio stream is filled by a sequence of pause data-bursts, the Pa of the first pause data-burst shall occur after exactly that number of IEC 60958 frames as indicated by the IAMF audio data-frame length in conjunction with the data-type-dependent information from Table 3. It is recommended that the sequence of pause data-bursts that fills the stream gap should continue from this point until the Pa of the first audio data-burst that follows the stream gap, or as close as possible to that point, considering the specific IEC 60958 frame length of the pause data-burst with respect to the IAMF audio data frame length. The repetition-period-length parameter contained in the pause data-burst is intended to be interpreted by the receiver as an indication of the number of decoded PCM samples that are missing (due to the resulting audio gap).</p>
@@ -2030,7 +2025,7 @@ This clause specifies the IAMF data-burst. Specific properties such as reference
 An IAMF bit stream consists of a sequence of IAMF audio data frames. The IAMF data-burst is headed with a burst-preamble, followed by the burst-payload. The structure of the IAMF data-burst is shown in Figure 1. The extended data-type Pe bits 0 to 15 of an IAMF data-burst is 0x0003h, and the data-type Pc bits 8 to 9 is 0. When IAMF data is being transmitted, the transmission device shall ensure that both the extended data-type Pe bits 0 to 15 and data-type Pc bits 8 to 9 values are set correctly. Additionally, the receiving device shall utilize both the extended data-type Pe bits 0 to 15 and data-type Pc bits 8 to 9 values to ensure that the content of the data-burst is correctly identified as IAMF.
 
 
-   <center><img src="images/figure-1-IAMF-data-burst-structure.png" width="800"></center>
+   <center><img src="v1.0.0_images/figure-1-IAMF-data-burst-structure.png" width="800"></center>
    <center><b>Figure 1. IAMF data-burst structure</b></center>
    <p>The IEC 60958 frame rate for data-type IAMF shall be equal to the audio sample rate.  The repetition period of data-bursts in IEC 60958 frames shall be determined from the IAMF audio data frame length in accordance with Table 1 (Pc bits 10-11). The maximum data-burst payload size in bits is determined from 2 x 16 x Rp – (Paf + Bs), where</p>
    <ul>
@@ -2048,7 +2043,7 @@ An IAMF bit stream consists of a sequence of IAMF audio data frames. The IAMF da
 When the required transmission rate for IAMF audio data exceeds the maximum data rate supported by an IAMF audio data burst, an IAMF HBR data-burst is used instead. An IAMF HBR data-burst is headed with a burst-preamble, followed by the burst-payload. The structure of the IAMF HBR data-burst is shown in Figure 1. The extended data-type Pe bits 0 to 15 of an IAMF data-burst is 0x0001h, and the data-type Pc bits 8 to 9 is 1. When IAMF data is being transmitted, the transmission device shall ensure that both the extended data-type Pe bits 0 to 15 and data-type Pc bits 8 to 9 values are set correctly. Additionally, the receiving device shall utilize both the extended data-type Pe bits 0 to 15 and data-type Pc bits 8 to 9 values to ensure that the content of the data-burst is correctly identified as IAMF HBR.
 
 
-   <center><img src="images/figure-2-IAMF-HBR-data-burst-structure.png" width="800"></center>
+   <center><img src="v1.0.0_images/figure-2-IAMF-HBR-data-burst-structure.png" width="800"></center>
    <center><b>Figure 2. IAMF HBR data-burst structure</b></center>
    <p>The IEC 60958 frame rate for data-type IAMF HBR shall be equal to two, four, eight, or sixteen times  the audio sample rate. Pc bits 10 to 11 indicate the relationship between the IEC 60958 frame rate and the audio sample rate.
 The repetition period of data-bursts in IEC 60958 frames shall be determined from the IAMF audio data frame length and the IEC 60958 frame rate in accordance with Table 1 (Pc bits 10-11). The maximum data-burst payload size in bits is determined from 2 x 16 x Rp – (Paf + Bs), where</p>
@@ -2061,7 +2056,7 @@ The repetition period of data-bursts in IEC 60958 frames shall be determined fro
      <p>Bs is the burst spacing in bits</p>
    </ul>
    <p>With repetition periods according to Table 1, the maximum data-burst payload size can then be calculated and be found in Table 3.</p>
-   <center><img src="images/table-3-maximum-burst-length-values.png" width="700"></center>
+   <center><img src="v1.0.0_images/table-3-maximum-burst-length-values.png" width="700"></center>
    <center><b>Table 3 – Maximum burst-length values per IAMF and IAMF HBR data-burst repetition period</b></center>
    <h4 class="heading settled" data-level="3.3.3" id="latency"><span class="secno">3.3.3. </span><span class="content">Latency of IAMF decoding</span><a class="self-link" href="#latency"></a></h4>
    
@@ -2074,7 +2069,7 @@ The latency of an external audio decoder to decode IAMF is defined as the sum of
    <p>If the HBR mode is used it is recommended to set the relationship between the IEC 60958 frame rate and the audio sample rate (bits 10 and 11 of Pc, see Table 1) so that the resulting maximum data-burst payload size is greater than the maximum size of an IAMF audio data frame.</p>
   </main>
   <div data-fill-with="conformance">
-   <h2 class="heading no-num no-ref settled" id="conformance"><span class="content">
+   <h2 class="no-ref no-num heading settled" id="conformance"><span class="content">
     Conformance</span><a class="self-link" href="#conformance"></a></h2>
    <p>
             Conformance requirements are expressed with a combination of descriptive assertions and RFC 2119 terminology.
@@ -2235,8 +2230,8 @@ The latency of an external audio decoder to decode IAMF is defined as the sum of
 
 })();
 </script>
-  <h2 class="heading no-num no-ref settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
-  <h3 class="heading no-num no-ref settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
+  <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
+  <h3 class="no-num no-ref heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
   <dl>
    <dt id="biblio-iamf">[IAMF]
    <dd><a href="https://aomediacodec.github.io/iamf/v1.1.0.html"><cite>Immersive Audio Model and Formats</cite></a>. Standard. URL: <a href="https://aomediacodec.github.io/iamf/v1.1.0.html">https://aomediacodec.github.io/iamf/v1.1.0.html</a>
